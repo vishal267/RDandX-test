@@ -31,3 +31,17 @@ values = [
    ]
 
 }
+
+
+##JEnkins 
+
+resource "helm_release" "jenkins" {
+  name       = "jenkins#"
+  namespace  = "kube-system"
+  repository = "https://charts.jenkins.io"
+  chart      = "jenkins"
+
+values = [
+     "${file("charts/jenkins/values.yaml")}"
+   ]
+}
