@@ -12,18 +12,3 @@ resource "kubernetes_namespace" "monitoring" {
   }
 }
 
-
-resource "kubernetes_namespace" "argocd" {
-  metadata {
-    annotations = {
-      name = "argocd"
-    }
-
-    labels = {
-      app = "argocd"
-    }
-
-    name = "argocd"
-  }
-
-}
