@@ -6,6 +6,6 @@ terraform {
 }
 provider "helm" {
   kubernetes {
-    config_path = "/root/devops-catalog-code/terraform-eks/kubeconfig"
+    config_path = "/root/kubeconfig"
   }
 }
